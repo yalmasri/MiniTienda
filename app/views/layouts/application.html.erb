@@ -66,9 +66,9 @@
           <div class="well sidebar-nav">
             <h3>Categorias</h3>
             <ul class="nav nav-list">
-              <li><%= link_to "Categoria 1", '#'  %></li>
-              <li><%= link_to "Categoria 2", '#'  %></li>
-              <li><%= link_to "Categoria 3", '#'  %></li>
+              <% @categories.each do |category| %>
+              <li><%= link_to category.name, '/?cat=' + category.name  %></li>
+              <% end %>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
