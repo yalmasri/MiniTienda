@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :categories
+  resources :posts
+  resources :categories
   devise_for :users
   get 'home/index'
 
